@@ -135,6 +135,7 @@ module CarrierWaveDirect
 
     def generate_policy(options)
       conditions = [
+        ["starts-with", "$utf8", ""],
         ["starts-with", "$key", key.sub(/#{Regexp.escape(FILENAME_WILDCARD)}\z/, "")]
       ]
 
